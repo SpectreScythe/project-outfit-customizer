@@ -1,45 +1,41 @@
 import React from "react";
-import * as NavLinkStyled from "../styles/NavLinks";
+import * as NLS from "../styles/NavLinks";
 import { NavLinksLeft, NavLinksRight } from "../config/myObjects";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <NavLinkStyled.NavContainer>
-      <NavLinkStyled.NavSubContainer>
-        <NavLinkStyled.NavSubLeft>
-          <NavLinkStyled.NavStyledUl>
+    <NLS.NavContainer>
+      <NLS.NavSubContainer>
+        <NLS.NavSubLeft>
+          <NLS.NavStyledUl>
             {NavLinksLeft.map((navLink, index) => (
-              <NavLinkStyled.NavStyledLi key={index}>
+              <NLS.NavStyledLi key={index}>
                 <Link to={navLink.path}>
                   {navLink.title}
-                  <NavLinkStyled.NavStyledIcon>
-                    {navLink.icon}
-                  </NavLinkStyled.NavStyledIcon>
+                  <NLS.NavStyledIcon>{navLink.icon}</NLS.NavStyledIcon>
                 </Link>
-              </NavLinkStyled.NavStyledLi>
+              </NLS.NavStyledLi>
             ))}
-          </NavLinkStyled.NavStyledUl>
-        </NavLinkStyled.NavSubLeft>
-      </NavLinkStyled.NavSubContainer>
+          </NLS.NavStyledUl>
+        </NLS.NavSubLeft>
+      </NLS.NavSubContainer>
 
-      <NavLinkStyled.NavSubContainer>
-        <NavLinkStyled.NavSubRight>
-          <NavLinkStyled.NavStyledUl>
+      <NLS.NavSubContainer>
+        <NLS.NavSubRight>
+          <NLS.NavStyledUl>
             {NavLinksRight.map((navLink, index) => (
-              <NavLinkStyled.NavStyledLi key={index}>
+              <NLS.NavStyledLi key={index}>
                 <Link to={navLink.path}>
                   {navLink.title}
-                  <NavLinkStyled.NavStyledIcon>
-                    {navLink.icon}
-                  </NavLinkStyled.NavStyledIcon>
+                  <NLS.NavStyledIcon>{navLink.icon}</NLS.NavStyledIcon>
                 </Link>
-              </NavLinkStyled.NavStyledLi>
+              </NLS.NavStyledLi>
             ))}
-          </NavLinkStyled.NavStyledUl>
-        </NavLinkStyled.NavSubRight>
-      </NavLinkStyled.NavSubContainer>
-    </NavLinkStyled.NavContainer>
+          </NLS.NavStyledUl>
+        </NLS.NavSubRight>
+      </NLS.NavSubContainer>
+    </NLS.NavContainer>
   );
 };
 
