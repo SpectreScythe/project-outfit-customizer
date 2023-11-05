@@ -1,6 +1,6 @@
 import React from "react";
-import * as NLS from "../styles/NavLinks";
-import { NavLinksLeft, NavLinksRight } from "../config/myObjects";
+import * as NLS from "../styles/StylesNav";
+import { NavLinksLeft, NavLinksRight } from "../config/ObjectNav";
 import { Link } from "react-router-dom";
 
 const Nav = () => {

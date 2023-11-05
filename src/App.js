@@ -1,12 +1,12 @@
 import React from "react";
 import Nav from "./components/Nav";
 import { Route, Routes, useLocation } from "react-router-dom";
-import Home from "./components/Home";
-import Trending from "./components/Trending";
-import Create from "./components/Create";
-import Cart from "./components/Cart";
-import Contact from "./components/Contact";
-import Account from "./components/Account";
+import Home from "./pages/Home";
+import Trending from "./pages/Trending";
+import Create from "./pages/Create";
+import Cart from "./pages/Cart";
+import Contact from "./pages/Contact";
+import Account from "./pages/Account";
 
 function App() {
   const location = useLocation();
