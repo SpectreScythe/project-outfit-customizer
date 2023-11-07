@@ -3,8 +3,6 @@ import styled from "styled-components";
 export const PageContainer = styled.div`
   width: 100%;
   height: auto;
-  background-color: #445069;
-  padding: 2rem 7rem;
 `;
 
 export const PageTopTitle = styled.p`
