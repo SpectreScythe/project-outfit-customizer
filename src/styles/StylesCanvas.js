@@ -9,7 +9,7 @@ export const ModelsContainer = styled.div`
 export const CanvasContainer = styled.div`
   width: 33vw;
   height: 50vh;
-  background-color: #222222;
+  background-color: #ccc;
   margin: 1rem;
   padding: 2rem;
   border-radius: 10px;

@@ -3,79 +3,79 @@ import { Canvas } from "@react-three/fiber";
 import { Center, OrbitControls, useGLTF } from "@react-three/drei";
 import { CanvasContainer } from "../styles/StylesCanvas";
 
-function Model(props) {
+function Model({ props, color }) {
   const { nodes, materials } = useGLTF("/T_shirt_gltf.zip.gltf");
   return (
-    <group {...props} dispose={null} scale={10}>
-      <mesh
+    <group {...props} dispose={null} scale={10} >
+      <mesh material-color={color} 
         geometry={nodes.Ribbing.geometry}
         material={materials.Body_FRONT_2664}
       />
-      <mesh
+      <mesh material-color={color}
         geometry={nodes.Ribbing_1.geometry}
         material={materials.Body_FRONT_2664}
       />
-      <mesh
+      <mesh material-color={color}
         geometry={nodes.Ribbing_2.geometry}
         material={materials.Body_FRONT_2664}
       />
-      <mesh
+      <mesh material-color={color}
         geometry={nodes.Ribbing_3.geometry}
         material={materials.Body_FRONT_2664}
       />
-      <mesh
+      <mesh material-color={color}
         geometry={nodes.Ribbing_4.geometry}
         material={materials.Body_FRONT_2664}
       />
-      <mesh
+      <mesh material-color={color}
         geometry={nodes.Ribbing_5.geometry}
         material={materials.Body_FRONT_2664}
       />
-      <mesh
+      <mesh material-color={color}
         geometry={nodes.Body_Front.geometry}
         material={materials.Body_FRONT_2664}
       />
-      <mesh
+      <mesh material-color={color}
         geometry={nodes.Body_Front_1.geometry}
         material={materials.Body_FRONT_2664}
       />
-      <mesh
+      <mesh material-color={color}
         geometry={nodes.Body_Front_2.geometry}
         material={materials.Body_FRONT_2664}
       />
-      <mesh
+      <mesh material-color={color}
         geometry={nodes.Body_Back.geometry}
         material={materials.Body_FRONT_2664}
       />
-      <mesh
+      <mesh material-color={color}
         geometry={nodes.Body_Back_1.geometry}
         material={materials.Body_FRONT_2664}
       />
-      <mesh
+      <mesh material-color={color}
         geometry={nodes.Body_Back_2.geometry}
         material={materials.Body_FRONT_2664}
       />
-      <mesh
+      <mesh material-color={color}
         geometry={nodes.Sleeves.geometry}
         material={materials.Sleeves_FRONT_2669}
       />
-      <mesh
+      <mesh material-color={color}
         geometry={nodes.Sleeves_1.geometry}
         material={materials.Sleeves_FRONT_2669}
       />
-      <mesh
+      <mesh material-color={color}
         geometry={nodes.Sleeves_2.geometry}
         material={materials.Sleeves_FRONT_2669}
       />
-      <mesh
+      <mesh material-color={color}
         geometry={nodes.Sleeves_3.geometry}
         material={materials.Sleeves_FRONT_2669}
       />
-      <mesh
+      <mesh material-color={color}
         geometry={nodes.Sleeves_4.geometry}
         material={materials.Sleeves_FRONT_2669}
       />
-      <mesh
+      <mesh material-color={color}
         geometry={nodes.Sleeves_5.geometry}
         material={materials.Sleeves_FRONT_2669}
       />
@@ -83,7 +83,7 @@ function Model(props) {
   );
 }
 
-const ModelShirt = () => {
+const ModelShirt = ({ color }) => {
   return (
     <CanvasContainer>
       <Canvas>
@@ -96,12 +96,12 @@ const ModelShirt = () => {
           <ambientLight
             amount={5}
             radius={9}
-            intensity={1}
+            intensity={3}
             ambient={0.25}
             position={[5, 5, -10]}
           />
           <Center>
-            <Model />
+            <Model color={color} />
           </Center>
         </Suspense>
       </Canvas>

@@ -3,15 +3,16 @@ import { Canvas } from "@react-three/fiber";
 import { Center, OrbitControls, useGLTF } from "@react-three/drei";
 import { CanvasContainer } from "../styles/StylesCanvas";
 
-function Model(props) {
+function Model({ props, color }) {
   const { nodes, materials } = useGLTF("/scene.gltf");
   return (
     <group {...props} dispose={null} scale={0.009}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <mesh
+            material-color={color}
             geometry={nodes.default_default_0.geometry}
-            material={materials["default"]}
+            // material={materials["default"]}
             rotation={[-Math.PI / 2, 0, 0]}
           />
         </group>
@@ -20,7 +21,7 @@ function Model(props) {
   );
 }
 
-const ModelShirt = () => {
+const ModelShirt = ({ color }) => {
   return (
     <CanvasContainer>
       <Canvas>
@@ -33,12 +34,12 @@ const ModelShirt = () => {
           <ambientLight
             amount={5}
             radius={9}
-            intensity={1}
+            intensity={0}
             ambient={0.25}
             position={[5, 5, -10]}
           />
           <Center>
-            <Model />
+            <Model color={color} />
           </Center>
         </Suspense>
       </Canvas>
